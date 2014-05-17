@@ -1,0 +1,32 @@
+<html>
+<head>
+	<script type="text/javascript" src="timeline.js"></script>
+	<link rel="stylesheet" type="text/css" href="timeline.css">
+	<script>
+		function drawtimeline() {
+			var timeline;
+			var data = [];
+
+			data.push({
+				'start': new Date(2012,7,15),
+				'end': new Date(2012,07,19),
+				'content': 'Project A'
+				});
+
+			var options = {
+				'start': new Date(2012,1,1),
+				'width':  '100%',
+				'height': 'auto',
+				'style': 'range',
+				'editable': true
+			};
+
+			timeline = new links.Timeline(document.getElementById('timeline'), options);
+			timeline.draw(data);
+		}
+	</script>
+</head>
+<body onload="drawtimeline()">
+  <div id="timeline"></div>
+</body>
+</html>
