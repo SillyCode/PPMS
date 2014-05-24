@@ -1,9 +1,27 @@
-.axis text {
-  font: 10px sans-serif;
+div.timeline-axis {
+	border-color: #5D99C3;
+	top:0px;
+	background-color: #5D99C3;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5D99C3', endColorstr='#3A6DA0'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#5D99C3), to(#3A6DA0)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #5D99C3,  #3A6DA0); /* for firefox 3.6+ */
 }
+div.timeline-axis-grid {
+}
+div.timeline-groups-axis {
+	border-color: #5D99C3;
+}
+div.timeline-axis-text {
+	color: white;
+}
+a.new_event {
+  position: absolute;
+  top: 8px;
 
-.axis path, .axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+  text-transform: uppercase;
+/*   color: white; */
+  font-weight: bold;
+  font-size: 20px;
+  cursor:pointer;
+  text-decoration: none;
 }
