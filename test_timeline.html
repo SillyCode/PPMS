@@ -1,0 +1,51 @@
+<html>
+<head>
+	<script type="text/javascript" src="timeline/timeline.js"></script>
+	<script type="text/javascript" stc="assets/js/timeline.js"></script>
+	<link rel="stylesheet" type="text/css" href="timeline/timeline.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/timeline.css">
+	<script>
+		function drawtimeline() {
+			var timeline;
+			var data = [];
+			var event;
+
+			event = {
+				'start': new Date(2012,7,15),
+				'end': new Date(2012,07,19),
+				'group': 'A',
+				'content': 'Project A'
+				};
+			var event_1 = {
+				'start': new Date(2012,7,20),
+				'end': new Date(2012,07,22),
+				'group': 'B',
+				'content': 'Project B'
+				};
+
+
+			var options = {
+				'start': new Date(2012,1,1),
+				'axisOnTop': 'true',
+				'width':  '100%',
+				'height': 'auto',
+				'style': 'range',
+				'editable': true
+			};
+
+			data.push(event,event_1);
+			timeline = new links.Timeline(document.getElementById('timeline'), options);
+			timeline.draw(data);
+		}
+
+		function new_event () {
+			//TODO:
+			alert("Awaiting implementation");
+		}
+	</script>
+</head>
+<body onload="drawtimeline()">
+  <div id="timeline"></div>
+  <div><a class="new_event" value="Add event" onclick="new_event()">Add</a>
+</body>
+</html>
