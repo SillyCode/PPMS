@@ -121,8 +121,22 @@
 
 	</script>
 </head>
-<body onload="drawtimeline()">
+<body onload="create_events()">
   <div id="timeline"></div>
-  <div><a class="new_event" value="Add event" onclick="new_event()">Add</a>
+  <div id="group_add"><a class="new_event" value="Add event" onclick="add_group()">Add</a></div>
+  <div id="create_event" style="display:none">
+	<form>
+	  <table>
+		  <tr colspan="2"><th>Create New Task</th></tr>
+		  <tr><td>Task Name</td><td><input type="text" name="task_name" /></td></tr>
+		  <tr><td>Starting Time (d/m/y)*</td><td><input type="text" name="task_start" /></td></tr>
+		  <tr><td>Ending Time (d/m/y)*</td><td><input type="text" name="task_end" /></td></tr>
+		  <tr><td>Content</td><td><input type="text" name="task_content" /></td></tr>
+		  <tr><td>Group</td><td><input type="text" name="task_group" /></td></tr>
+	  <tr><td><input type="button" value="Apply" onclick="get_back()"
+/></td><td><input type="button" value="Back" onclick="get_back()" /></td></tr>
+	  </table>
+	</form>
+  </div>
 </body>
 </html>
