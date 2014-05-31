@@ -57,7 +57,7 @@
 		//creates new event
 		function new_event () {
 			document.getElementById("timeline").style.display = "none";
-			document.getElementById("group_add").style.display = "none";
+// 			document.getElementById("group_add").style.display = "none";
 			document.getElementById("create_event").style.display = "block";
 
 			//DEBUG:
@@ -68,7 +68,7 @@
 				'group': 'B',
 				'content': 'Project C'
 			};
-			insert_new_event(eve);
+// 			insert_new_event(eve);
 		}
 
 		//adding/removing group
@@ -113,7 +113,7 @@
 		//returns to the timeline
 		function get_back() {
 			document.getElementById("timeline").style.display = "block";
-			document.getElementById("group_add").style.display = "block";
+// 			document.getElementById("group_add").style.display = "block";
 			document.getElementById("create_event").style.display = "none";
 			timeline.draw(data);
 		}
@@ -122,20 +122,26 @@
 </head>
 <body onload="create_events()">
   <div id="timeline"></div>
-  <div id="group_add"><a class="new_event" value="Add event" onclick="add_group()">Add</a></div>
+<!-- TEST -->
+<!--   <div id="group_add"><a class="new_event" value="Add event" onclick="add_group()">Add</a></div> -->
   <div id="create_event" style="display:none">
-	<form>
+	<form method="POST">
 	  <table>
-		  <tr colspan="2"><th>Create New Task</th></tr>
-		  <tr><td>Task Name</td><td><input type="text" name="task_name" /></td></tr>
+		  <tr><th colspan="2" class="th_new_event">Create New Task</th></tr>
+		  <tr><td>Task Name*</td><td><input type="text" name="task_name"
+/></td></tr>
 		  <tr><td>Starting Time (d/m/y)*</td><td><input type="text" name="task_start" /></td></tr>
-		  <tr><td>Ending Time (d/m/y)*</td><td><input type="text" name="task_end" /></td></tr>
-		  <tr><td>Content</td><td><input type="text" name="task_content" /></td></tr>
-		  <tr><td>Group</td><td><input type="text" name="task_group" /></td></tr>
-	  <tr><td><input type="button" value="Apply" onclick="get_back()"
-/></td><td><input type="button" value="Back" onclick="get_back()" /></td></tr>
+		  <tr><td>Ending Time (d/m/y)</td><td><input type="text" name="task_end"
+/></td></tr>
+		  <tr><td>Content*</td><td><input type="text" name="task_content"
+/></td></tr>
+		  <tr><td>Group</td><td><input type="text" name="task_group"
+/></td></tr>
+	  <tr><td><input type="submit" value="Apply" /></td><td><input
+type="button" value="Back" onclick="get_back()" /></td></tr>
 	  </table>
 	</form>
+	<div class="note">Fields marked with * are mandatory</div>
   </div>
 </body>
 </html>

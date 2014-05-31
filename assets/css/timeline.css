@@ -24,3 +24,14 @@ a.new_event {
   cursor:pointer;
   text-decoration: none;
 }
+/****************/
+/* Create Event */
+/****************/
+
+th.th_new_event {
+  background-color:#d5ddf6;
+}
+
+div.note {
+  font:italic bold 13px/30px Georgia, serif;
+}
