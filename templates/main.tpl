@@ -10,7 +10,6 @@
 <!-- TODO: Add note to the task creation about mandatory fields -->
 <!-- TODO: Add tooltips to the fields in task creation -->
 <!-- TODO: Add server validation to task -->
-<!-- TODO: Write a template file to render data from POST -->
 <!-- TODO: Apply the same styling to the task creation form as the timeline -->
 <!-- TODO: Implement function remove even when the task is deleted through UI
 -->
